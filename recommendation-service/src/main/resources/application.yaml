@@ -1,0 +1,19 @@
+server:
+  port: 8888
+  tomcat:
+    uri-encoding: UTF-8
+      
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://dbrec.cg4zzwk2bpuf.ap-southeast-1.rds.amazonaws.com/dbrec?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: clouder
+    password: Clouder123$%
+    hikari:
+      pool-name: DatebookHikariCP
+      maximum-pool-size: 20
+      minimum-idle: 5
+      connection-test-query: SELECT 1
+  jpa:
+    database: MYSQL
+    show-sql: true
